@@ -2,8 +2,8 @@ import praw
 
 # Create a Reddit instance
 reddit = praw.Reddit(
-    client_id="b6kYPRc4ZnXFgXulJjuwuA",
-    client_secret="UVLdLsu2xif2jqoFuvhTBYdZPRpNJg",
+    client_id="",
+    client_secret="",
     user_agent="your_user_agent"
 )
 
