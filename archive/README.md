@@ -20,43 +20,12 @@ Sentiment Analysis is a Natural Language Processing (NLP) technique that determi
    - Punctuation (e.g., "Great!!!" vs "Great")
    - Capitalization (e.g., "GREAT" vs "great")
 
-## Features
-
-- Analyzes Reddit comments about specified stocks
-- Calculates sentiment scores for each comment
-- Generates visualizations:
-  - Sentiment distribution by stock
-  - Sentiment trends over time
-  - Post engagement vs sentiment
-  - Upvote ratio vs sentiment
-- Saves results to CSV for further analysis
-
-## Prerequisites
-
-- Python 3.7+
-- Reddit API credentials (client ID and client secret)
-
-## Installation
-
-1. Clone this repository:
-```bash
-git clone <repository-url>
-cd WSBRedditBot
-```
-
-2. Install required packages:
-```bash
-pip install -r requirements.txt
-```
-
-3. Set up Reddit API credentials:
+Set up Reddit API credentials:
    - Go to https://www.reddit.com/prefs/apps
    - Click "create app" or "create another app"
-   - Fill in the required information
-   - Select "script" as the app type
    - Note down your client ID and client secret
 
-4. Update the `REDDIT_CONFIG` in the script with your credentials:
+Update the `REDDIT_CONFIG` with your credentials:
 ```python
 REDDIT_CONFIG = {
     'client_id': "YOUR_CLIENT_ID",
@@ -64,19 +33,6 @@ REDDIT_CONFIG = {
     'user_agent': 'YOUR_APP_NAME'
 }
 ```
-
-## Usage
-
-1. Run the script:
-```bash
-python archive/tstewart161_main.py
-```
-
-2. The script will:
-   - Fetch posts and comments from r/wallstreetbets
-   - Analyze sentiment for each comment
-   - Generate visualizations in the `output` directory
-   - Save results to `Reddit_Sentiment_Equity.csv`
 
 ## Output
 
@@ -90,28 +46,9 @@ The script generates several files:
    - Post score and upvote ratio
    - Author information
 
-2. **Visualizations** (in the `output` directory):
-   - `sentiment_by_stock.png`: Box plot showing sentiment distribution for each stock
-   - `sentiment_over_time.png`: Line plot showing sentiment trends over time
-   - `engagement_vs_sentiment.png`: Scatter plot of post engagement vs sentiment
-   - `upvotes_vs_sentiment.png`: Scatter plot of upvote ratio vs sentiment
-
 ## Interpreting Results
 
 - **Sentiment Scores**:
   - Positive values (> 0): Positive sentiment
   - Negative values (< 0): Negative sentiment
   - Values near 0: Neutral sentiment
-
-- **Visualizations**:
-  - Higher sentiment scores indicate more positive discussion
-  - Trends over time can show changing market sentiment
-  - Correlation between engagement and sentiment can indicate community interest
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
