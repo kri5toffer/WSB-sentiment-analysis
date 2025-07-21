@@ -243,7 +243,7 @@ def main():
     
     # Create visualizations
     print("\nCreating visualizations...")
-    create_visualizations(df)
+    # create_visualizations(df)
     print(f"Visualizations saved to {OUTPUT_DIR} directory")
     
     # Save results to CSV
